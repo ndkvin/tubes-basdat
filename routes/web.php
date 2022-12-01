@@ -16,11 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/api', function() {
-    $req = DB::insert("INSERT INTO test.dbo.MAPEL (NamaMapel) VALUES('Matematika')");
+    return view('home');
 });
 
 Auth::routes();
