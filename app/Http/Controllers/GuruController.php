@@ -14,4 +14,10 @@ class GuruController extends Controller
       'guru' => $guru,
     ]);
   }
+
+  public function destroy($KdGuru) {
+    DB::delete('DELETE FROM GURU WHERE KdGuru = ?', [$KdGuru]);
+    return redirect()
+      ->route('guru');
+  }
 }

@@ -16,13 +16,21 @@
                         <tr>
                             <td>{{ $guru->KdGuru }}</td>
                             <td>{{ $guru->NamaGuru }}</td>
-                            <td>{{ $guru->JenisKelamin==1 ? 'Perempuan' : 'Laki-Laki' }}</td>
-                        </tr>
-                    @empty
+                            <td>{{ $guru->JenisKelamin == 1 ? 'Perempuan' : 'Laki-Laki' }}</td>
+                            <td>
+                                <form action="{{ route('guru.destroy', $guru->KdGuru) }}" method="POST">
+                                    @method('delete')
+                                    @csrf
+                                    <button type="submit" class="dropdown-item text-danger">
+                                        Hapus
+                                    </button>
+                                </form>
+                            </td>
+                        @empty
                         <tr>
-                          <td>
-                            Data Empty
-                          </td>
+                            <td>
+                                Data Empty
+                            </td>
                         </tr>
                     @endforelse
                 </tbody>

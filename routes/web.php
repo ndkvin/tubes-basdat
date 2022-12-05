@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::controller(Controllers\GuruController::class)->group(function () {
   Route::get('/guru', 'showAll')
     ->name('guru');
+  Route::delete('/guru/destroy/{KdGuru}', 'destroy')
+    ->name('guru.destroy');
 });
 
 Auth::routes();
