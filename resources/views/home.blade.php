@@ -25,8 +25,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Mapel</h5>
-                        <p class="card-text">Manage Mata Pelajaran</p>
-                        <a href="#" class="btn btn-primary">Button</a>
+                        <p class="card-text">Lihat Mata Pelajaran</p>
+                        <a href="{{ route('mapel') }}" class="btn btn-primary">Lihat</a>
                     </div>
                 </div>
             </div>

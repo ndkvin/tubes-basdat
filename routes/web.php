@@ -34,6 +34,11 @@ Route::controller(Controllers\MapelController::class)->group(function () {
     Route::post('/mapel/store', 'store')
     ->name('mapel.store');
 });
+
+Route::controller(Controllers\KelasController::class)->group(function () {
+  Route::get('/kelas', 'showAll')
+    ->name('kelas');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
