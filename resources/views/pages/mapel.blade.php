@@ -6,20 +6,16 @@
             <table class="table ">
                 <thead>
                     <tr>
-                        <th scope="col">KdGuru</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Jenis Kelamin</th>
+                        <th scope="col">NamaMapel</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($guru as $guru)
+                    @forelse ($mapel as $mapel)
                         <tr>
-                            <td>{{ $guru->KdGuru }}</td>
-                            <td>{{ $guru->NamaGuru }}</td>
-                            <td>{{ $guru->JenisKelamin == 1 ? 'Perempuan' : 'Laki-Laki' }}</td>
+                            <td>{{ $mapel->NamaMapel }}</td>
                             <td>
-                                <form action="{{ route('guru.destroy', $guru->KdGuru) }}" method="POST">
+                                <form action="{{ route('mapel.destroy', $mapel->NamaMapel) }}" method="POST">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="dropdown-item text-danger">

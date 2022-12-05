@@ -19,13 +19,19 @@ use App\Http\Controllers;
 Route::get('/', function () {
     return view('home');
 });
+
 Route::controller(Controllers\GuruController::class)->group(function () {
   Route::get('/guru', 'showAll')
     ->name('guru');
   Route::delete('/guru/destroy/{KdGuru}', 'destroy')
     ->name('guru.destroy');
 });
-
+Route::controller(Controllers\MapelController::class)->group(function () {
+  Route::get('/mapel', 'showAll')
+    ->name('mapel');
+    Route::delete('/mapel/destroy/{NamaMapel}', 'destroy')
+    ->name('mapel.destroy');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

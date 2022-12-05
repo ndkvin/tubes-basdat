@@ -16,8 +16,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Guru</h5>
-                        <p class="card-text">Manage Guru</p>
-                        <a href="{{ route('guru') }}" class="btn btn-primary">Button</a>
+                        <p class="card-text">Lihat Guru</p>
+                        <a href="{{ route('guru') }}" class="btn btn-primary">Lihat</a>
                     </div>
                 </div>
             </div>
