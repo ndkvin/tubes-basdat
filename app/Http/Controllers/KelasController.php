@@ -9,7 +9,7 @@ class KelasController extends Controller
 {
     public function showAll() {
       $kelas = DB::select('SELECT 
-        K.Grade, K.NamaKelas, COUNT(RB.NisSiswa) Total
+        K.Grade, K.NamaKelas, RB.KdKelas, COUNT(RB.NisSiswa) Total
       FROM 
         KELAS K
       JOIN 
@@ -19,7 +19,7 @@ class KelasController extends Controller
       WHERE 
         K.TahunAjaran = ?
       GROUP BY 
-        K.Grade, K.NamaKelas
+        K.Grade, K.NamaKelas, RB.KdKelas
       ORDER BY
         K.Grade, K.NamaKelas
       ', [2022]);

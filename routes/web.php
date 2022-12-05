@@ -39,6 +39,11 @@ Route::controller(Controllers\KelasController::class)->group(function () {
   Route::get('/kelas', 'showAll')
     ->name('kelas');
 });
+
+Route::controller(Controllers\SiswaController::class)->group(function () {
+  Route::get('/siswa/{KdKelas}', 'showSiswaKelas')
+    ->name('siswa.kelas');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

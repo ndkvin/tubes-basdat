@@ -19,7 +19,7 @@
                             <td>{{ $kelas->NamaKelas }}</td>
                             <td>{{ $kelas->Total}}</td>
                             <td>
-                                <a href="btn btn-primary d-block">Lihat Siswa</a>
+                                <a class="btn btn-primary d-block" href="{{ route('siswa.kelas', $kelas->KdKelas) }}">Lihat Siswa</a>
                             </td>
                         @empty
                         <tr>
