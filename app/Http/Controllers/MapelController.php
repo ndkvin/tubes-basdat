@@ -21,4 +21,11 @@ class MapelController extends Controller
       return redirect()
         ->route('mapel');
     }
+
+    public function store(Request $request) {
+      DB::insert('INSERT INTO MAPEL (NamaMapel) VALUES (?)',[$request->NamaMapel] );
+
+      return redirect()
+        ->route('mapel');
+    }
 }

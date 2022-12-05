@@ -2,6 +2,13 @@
 
 @section('content')
     <div class="container align-center">
+        <form method="POST" action="{{ route('mapel.store') }}">
+          @method('post')
+          @csrf
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Tambah Mapel" aria-label="Recipient's username" aria-describedby="basic-addon2" name="NamaMapel">
+          </div>
+        </form>
         <div class="table-responsive">
             <table class="table ">
                 <thead>

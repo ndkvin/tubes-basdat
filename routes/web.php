@@ -31,6 +31,8 @@ Route::controller(Controllers\MapelController::class)->group(function () {
     ->name('mapel');
     Route::delete('/mapel/destroy/{NamaMapel}', 'destroy')
     ->name('mapel.destroy');
+    Route::post('/mapel/store', 'store')
+    ->name('mapel.store');
 });
 Auth::routes();
 
