@@ -20,4 +20,12 @@ class GuruController extends Controller
     return redirect()
       ->route('guru');
   }
+
+  public function lihatJamMengajar() {
+    $guru = DB::select('SELECT * FROM V_TotalJamMengajar');
+
+    return view('pages.guru-jam', [
+      'guru'=> $guru
+    ]);
+  }
 }

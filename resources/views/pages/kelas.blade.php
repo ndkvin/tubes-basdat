@@ -8,6 +8,7 @@
                     <tr>
                         <th scope="col">Grade</th>
                         <th scope="col">Nama Kelas</th>
+                        <th scope="col">Tahun Ajaran</th>
                         <th scope="col">Total Siswa</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -17,7 +18,9 @@
                         <tr>
                             <td>{{ $kelas->Grade }}</td>
                             <td>{{ $kelas->NamaKelas }}</td>
+                            <td>{{ $kelas->TahunAjaran }}</td>
                             <td>{{ $kelas->Total}}</td>
+
                             <td>
                                 <a class="btn btn-primary d-block" href="{{ route('siswa.kelas', $kelas->KdKelas) }}">Lihat Siswa</a>
                             </td>

@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::controller(Controllers\GuruController::class)->group(function () {
   Route::get('/guru', 'showAll')
     ->name('guru');
+  Route::get('/guru/jam', 'lihatJamMengajar')
+    ->name('guru.jam');
   Route::delete('/guru/destroy/{KdGuru}', 'destroy')
     ->name('guru.destroy');
 });

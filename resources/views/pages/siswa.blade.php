@@ -11,6 +11,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Alamat</th>
+                        <th scope="col">Nama Orang Tua</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,8 +20,11 @@
                             <td>{{ $siswa->Nis }}</td>
                             <td>{{ $siswa->Nisn }}</td>
                             <td>{{ $siswa->Nama }}</td>
-                            <td>{{ $siswa->JenisKelamin == 1 ? 'Perempuan' : 'Laki-laki'}}</td>
-                            <td>{{ $siswa->Jalan }}, {{ $siswa->Kelurahan }}, {{ $siswa->Kecamatan }}, {{ $siswa->Kota }}</td>
+                            <td>{{ $siswa->JenisKelamin == 1 ? 'Perempuan' : 'Laki-laki' }}</td>
+                            <td>
+                                {{ $siswa->Jalan }}, {{ $siswa->Kelurahan }}, {{ $siswa->Kecamatan }}, {{ $siswa->Kota }}
+                            </td>
+                            <td>{{ $siswa->NamaOrtu }}</td>
                         @empty
                         <tr>
                             <td>

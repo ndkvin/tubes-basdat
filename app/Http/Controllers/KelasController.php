@@ -9,20 +9,18 @@ class KelasController extends Controller
 {
     public function showAll() {
       $kelas = DB::select('SELECT 
-        K.Grade, K.NamaKelas, RB.KdKelas, COUNT(RB.NisSiswa) Total
+        K.Grade, K.NamaKelas, RB.KdKelas, K.TahunAjaran, COUNT(RB.NisSiswa) Total
       FROM 
         KELAS K
       JOIN 
         RIWAYAT_BELAJAR RB
       ON
         K.KdKelas=RB.KdKelas
-      WHERE 
-        K.TahunAjaran = ?
       GROUP BY 
-        K.Grade, K.NamaKelas, RB.KdKelas
+        K.Grade, K.NamaKelas, RB.KdKelas, K.TahunAjaran
       ORDER BY
-        K.Grade, K.NamaKelas
-      ', [2022]);
+        K.TahunAjaran DESC, K.Grade, K.NamaKelas
+      ');
       return view('pages.kelas', [
         'kelas' => $kelas
       ]);
