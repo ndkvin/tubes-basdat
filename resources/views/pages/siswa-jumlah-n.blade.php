@@ -7,13 +7,13 @@
                 <thead>
                     <tr>
                         <th scope="col">Minat Bakat Akademik</th>
-                        <th scope="col">Minat Akademik</th>
+                        <th scope="col">Jumlah Siswa</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($siswa as $siswa)
                         <tr>
-                            <td>{{ $siswa->MbAkademik  }}</td>
+                            <td>{{ $siswa->MbNonAkademik  }}</td>
                             <td>{{ $siswa->JumlahSiswa }}</td>
                         </tr>
                     @empty

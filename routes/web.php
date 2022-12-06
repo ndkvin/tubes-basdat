@@ -53,8 +53,12 @@ Route::controller(Controllers\SiswaController::class)->group(function () {
     ->name('siswa.organisasi');
   Route::get('/siswa/keluar/list', 'siswaKeluar')
     ->name('siswa.keluar');
-    Route::get('/siswa/MbAkademik/list', 'jumlahSiswaMbAkademik')
+  Route::get('/siswa/MbAkademik/list', 'jumlahSiswaMbAkademik')
     ->name('siswa.mbakademik');
+  Route::get('/siswa/MbNonAkademik/list', 'jumlahSiswaMbNonAkademik')
+    ->name('siswa.mbnonakademik');
+  Route::get('/siswa/mbakademikall/list', 'siswaMbAkademik')
+    ->name('siswa.mbnonakademikall');
 });
 Auth::routes();
 

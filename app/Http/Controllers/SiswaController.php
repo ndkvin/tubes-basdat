@@ -88,4 +88,26 @@ class SiswaController extends Controller
         'siswa'=> $siswa,
       ]);
     }
+
+    public function jumlahSiswaMbNonAkademik() {
+      $siswa = DB::select('SELECT
+        *
+      FROM
+        V_JumlahSiswaMbNonAkademik
+      ');
+      return view('pages.siswa-jumlah-n', [
+        'siswa'=> $siswa,
+      ]);
+    }
+
+    public function siswaMbAkademik() {
+      $siswa = DB::select('SELECT
+        *
+      FROM
+        V_MbAkademik
+      ');
+      return view('pages.siswa-mbakademik', [
+        'siswa'=> $siswa,
+      ]);
+    }
 }

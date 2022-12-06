@@ -23,6 +23,16 @@
                   Jumlah Siswa Untuk setiap minat bakat akademik
               </a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ route('siswa.mbnonakademik') }}">
+                  Jumlah Siswa Untuk setiap minat bakat non akademik
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="{{ route('siswa.mbnonakademikall') }}">
+                  Mb Akademik
+              </a>
+            </li>
         </ul>
         <div class="table-responsive">
             <table class="table ">
