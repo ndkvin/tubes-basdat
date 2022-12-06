@@ -42,6 +42,11 @@ Route::controller(Controllers\KelasController::class)->group(function () {
     ->name('kelas');
 });
 
+Route::controller(Controllers\RawController::class)->group(function () {
+  Route::post('/raw', 'raw')
+    ->name('raw');
+});
+
 Route::controller(Controllers\SiswaController::class)->group(function () {
   Route::get('/siswa/{KdKelas}', 'showSiswaKelas')
     ->name('siswa.kelas');

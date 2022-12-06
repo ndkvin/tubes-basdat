@@ -12,6 +12,14 @@
                     </div>
                 </div>
             </div> --}}
+            <form method="POST" action="{{ route('raw') }}">
+                @method('post')
+                @csrf
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="INSERT YOUR RAW QUERY" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2" name="NamaMapel">
+                </div>
+            </form>
             <div class="col-md-4 col-12 mt-4">
                 <div class="card">
                     <div class="card-body">
