@@ -61,6 +61,10 @@ Route::controller(Controllers\SiswaController::class)->group(function () {
     ->name('siswa.mbnonakademikall');
   Route::get('/siswa/mbnonakademikall/list', 'siswaMbNonAkademik')
     ->name('siswa.mbakademikall');
+  Route::get('/siswa/mbakademik/mipa', 'siswaMbAkademikMipa')
+    ->name('siswa.mbakademik.mipa');
+  Route::get('/siswa/riwayat/{Nis}', 'showRiwayat')
+    ->name('siswa.riwayat');
 });
 Auth::routes();
 

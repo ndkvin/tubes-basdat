@@ -8,17 +8,13 @@ use Illuminate\Support\Facades\DB;
 class SiswaController extends Controller
 {
     public function showSiswa() {
-      $siswa = DB::select('SELECT S.*, RB.*, O.Nama NamaOrtu 
-      FROM 
+      $siswa = DB::select('SELECT 
+        S.* , O.Nama NamaOrtu
+      FROM
         SISWA S
-      JOIN 
-        RIWAYAT_BELAJAR RB
+      JOIN ORTU O
       ON
-        RB.NisSiswa=S.NIS
-      JOIN
-        ORTU O
-      ON 
-        O.Nik=S.NikOrtu
+        S.NikOrtu=O.Nik
       ');
       return view('pages.siswa', [
         'siswa'=> $siswa
@@ -119,6 +115,20 @@ class SiswaController extends Controller
       ');
       return view('pages.siswa-mbnonakademik', [
         'siswa'=> $siswa,
+      ]);
+    }
+
+    public function siswaMbAkademikMipa() {
+      $siswa = DB::select('SELECT * FROM V_MbMipa');
+      return view('pages.siswa-mb-mipa', [
+        'siswa' => $siswa,
+      ]);
+    }
+
+    public function showRiwayat($Nis) {
+      $siswa = DB::select('SELECT * FROM V_RiwayatBelajar WHERE Nis=?',[$Nis]);
+      return view('pages.siswa-riwayat', [
+        'siswa' => $siswa,
       ]);
     }
 }
