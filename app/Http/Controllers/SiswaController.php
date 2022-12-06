@@ -25,4 +25,12 @@ class SiswaController extends Controller
         'siswa'=> $siswa
       ]);
     }
+
+    public function siswaLomba() {
+      $siswa = DB::select('SELECT * FROM V_PerlombaanDiikutiSiswa ORDER BY Tahun DESC');
+
+      return view('pages.siswa-lomba', [
+        'siswa'=> $siswa,
+      ]);
+    }
 }
