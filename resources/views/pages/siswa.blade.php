@@ -33,6 +33,11 @@
                   Mb Akademik
               </a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ route('siswa.mbakademikall') }}">
+                  Mb Non Akademik
+              </a>
+            </li>
         </ul>
         <div class="table-responsive">
             <table class="table ">

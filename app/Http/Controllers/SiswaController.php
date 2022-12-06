@@ -110,4 +110,15 @@ class SiswaController extends Controller
         'siswa'=> $siswa,
       ]);
     }
+
+    public function siswaMbNonAkademik() {
+      $siswa = DB::select('SELECT
+        *
+      FROM
+        V_MbNonAkademik
+      ');
+      return view('pages.siswa-mbnonakademik', [
+        'siswa'=> $siswa,
+      ]);
+    }
 }

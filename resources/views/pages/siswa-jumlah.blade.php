@@ -7,7 +7,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Minat Bakat Akademik</th>
-                        <th scope="col">Minat Akademik</th>
+                        <th scope="col">Jumlah Siswa</th>
                     </tr>
                 </thead>
                 <tbody>
