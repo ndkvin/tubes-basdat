@@ -2,6 +2,13 @@
 
 @section('content')
     <div class="container align-center">
+        <ul class="list-group my-5">
+            <li class="list-group-item">
+                <a href="{{ route('siswa.lomba') }}">
+                    Siswa Mengikuti Lomba
+                </a>
+            </li>
+        </ul>
         <div class="table-responsive">
             <table class="table ">
                 <thead>

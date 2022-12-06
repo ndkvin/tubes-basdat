@@ -2,16 +2,12 @@
 
 @section('content')
     <div class="container align-center">
-        <ul class="list-group mb-5">
+        <ul class="list-group my-5">
             <li class="list-group-item">
                 <a href="{{ route('guru.jam') }}">
                   Jam Mengajar Tiap Guru Setiap Minggu
                 </a>
             </li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
         </ul>
         <div class="table-responsive">
             <table class="table ">

@@ -17,7 +17,7 @@
                             <td>{{ $siswa->Nama }}</td>
                             <td>{{ $siswa->NamaLomba }}</td>
                             <td>{{ $siswa->Tahun }}</td>
-                        @empty
+                    @empty
                         <tr>
                             <td>
                                 Data Empty

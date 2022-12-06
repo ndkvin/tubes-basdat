@@ -24,6 +24,15 @@
             <div class="col-md-4 col-12 mt-4">
                 <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Siswa</h5>
+                        <p class="card-text">Manage Siswa</p>
+                        <a href="{{ route('siswa') }}" class="btn btn-primary">Lihat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mt-4">
+                <div class="card">
+                    <div class="card-body">
                         <h5 class="card-title">Mapel</h5>
                         <p class="card-text">Lihat Mata Pelajaran</p>
                         <a href="{{ route('mapel') }}" class="btn btn-primary">Lihat</a>
