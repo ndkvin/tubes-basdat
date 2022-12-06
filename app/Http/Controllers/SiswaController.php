@@ -51,4 +51,17 @@ class SiswaController extends Controller
         'siswa'=> $siswa,
       ]);
     }
+
+    public function siswaOrganisasi() {
+      $siswa = DB::select('SELECT 
+        * 
+      FROM 
+        V_OrganisasiDiikutiSiswa 
+      ORDER BY 
+        Tahun DESC, NamaOrganisasi, NamaSiswa');
+      
+      return view('pages.siswa-organisasi', [
+        'siswa'=> $siswa,
+      ]);
+    }
 }

@@ -49,6 +49,8 @@ Route::controller(Controllers\SiswaController::class)->group(function () {
     ->name('siswa');
   Route::get('/siswa/lomba/list', 'siswaLomba')
     ->name('siswa.lomba');
+  Route::get('/siswa/organisasi/list', 'siswaOrganisasi')
+    ->name('siswa.organisasi');
 });
 Auth::routes();
 

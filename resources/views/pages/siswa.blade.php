@@ -8,6 +8,11 @@
                     Siswa Mengikuti Lomba
                 </a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ route('siswa.organisasi') }}">
+                  Siswa Mengikuti Organisasi
+              </a>
+          </li>
         </ul>
         <div class="table-responsive">
             <table class="table ">
