@@ -155,4 +155,18 @@ class SiswaController extends Controller
       'siswa' => $siswa,
     ]);
   }
+
+  public function nilai() {
+    $siswa = DB::select('SELECT * FROM V_NilaiSiswa ORDER BY Nama, NamaMapel, SemesterKe');
+    return view('pages.siswa-nilai', [
+      'siswa'=> $siswa,
+    ]);
+  }
+
+  public function absensi() {
+    $siswa = DB::select('SELECT * FROM V_TotalMasuk ORDER BY Nama, NamaMapel, SemesterKe');
+    return view('pages.siswa-absensi', [
+      'siswa'=> $siswa,
+    ]);
+  }
 }

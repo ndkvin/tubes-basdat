@@ -48,6 +48,16 @@
                     Siswa Minat Akademik MIPA
                 </a>
             </li>
+            <li class="list-group-item">
+                <a href="{{ route('siswa.nilai') }}">
+                    Nilai Siswa
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="{{ route('siswa.absesnsi') }}">
+                    Absensi Siswa
+                </a>
+            </li>
         </ul>
         <div class="table-responsive">
             <table class="table ">

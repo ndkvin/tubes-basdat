@@ -67,6 +67,10 @@ Route::controller(Controllers\SiswaController::class)->group(function () {
     ->name('siswa.mbakademik.mipa');
   Route::get('/siswa/riwayat/{Nis}', 'showRiwayat')
     ->name('siswa.riwayat');
+  Route::get('/siswa/nilai/all', 'nilai')
+    ->name('siswa.nilai');
+  Route::get('/siswa/absesnsi/all', 'absensi')
+    ->name('siswa.absesnsi');
 });
 Auth::routes();
 
