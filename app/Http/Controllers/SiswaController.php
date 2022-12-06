@@ -64,4 +64,28 @@ class SiswaController extends Controller
         'siswa'=> $siswa,
       ]);
     }
+
+    public function siswaKeluar() {
+      $siswa = DB::select('SELECT 
+        *
+      FROM
+        V_SiswaKeluar
+      ');
+
+      return view('pages.siswa-keluar', [
+        'siswa'=> $siswa,
+      ]);
+    }
+
+    public function jumlahSiswaMbAkademik() {
+      $siswa = DB::select('SELECT
+        *
+      FROM
+        V_JumlahSiswaMbAkademik
+      ');
+
+      return view('pages.siswa-jumlah', [
+        'siswa'=> $siswa,
+      ]);
+    }
 }

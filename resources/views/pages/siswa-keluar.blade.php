@@ -2,28 +2,6 @@
 
 @section('content')
     <div class="container align-center">
-        <ul class="list-group my-5">
-            <li class="list-group-item">
-                <a href="{{ route('siswa.lomba') }}">
-                    Siswa Mengikuti Lomba
-                </a>
-            </li>
-            <li class="list-group-item">
-              <a href="{{ route('siswa.organisasi') }}">
-                  Siswa Mengikuti Organisasi
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a href="{{ route('siswa.keluar') }}">
-                  Siswa Keluar Sebelum Lulus
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a href="{{ route('siswa.mbakademik') }}">
-                  Jumlah Siswa Untuk setiap minat bakat akademik
-              </a>
-            </li>
-        </ul>
         <div class="table-responsive">
             <table class="table ">
                 <thead>
@@ -33,7 +11,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Alamat</th>
-                        <th scope="col">Nama Orang Tua</th>
+                        <th scope="col">Tanggal Keluar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,7 +24,7 @@
                             <td>
                                 {{ $siswa->Jalan }}, {{ $siswa->Kelurahan }}, {{ $siswa->Kecamatan }}, {{ $siswa->Kota }}
                             </td>
-                            <td>{{ $siswa->NamaOrtu }}</td>
+                            <td>{{ $siswa->TanggalKeluar }}</td>
                         </tr>
                         @empty
                         <tr>
