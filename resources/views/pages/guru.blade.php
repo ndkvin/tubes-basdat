@@ -5,7 +5,7 @@
         <ul class="list-group my-5">
             <li class="list-group-item">
                 <a href="{{ route('guru.jam') }}">
-                  Jam Mengajar Tiap Guru Setiap Minggu
+                    Jam Mengajar Tiap Guru Setiap Minggu
                 </a>
             </li>
         </ul>

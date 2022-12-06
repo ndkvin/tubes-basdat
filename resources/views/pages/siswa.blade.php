@@ -19,6 +19,11 @@
                 </a>
             </li>
             <li class="list-group-item">
+                <a href="{{ route('siswa.lulus') }}">
+                    Siswa Lulus
+                </a>
+            </li>
+            <li class="list-group-item">
                 <a href="{{ route('siswa.mbakademik') }}">
                     Jumlah Siswa Untuk setiap minat bakat akademik
                 </a>

@@ -47,6 +47,8 @@ Route::controller(Controllers\SiswaController::class)->group(function () {
     ->name('siswa.kelas');
   Route::get('/siswa', 'showSiswa')
     ->name('siswa');
+  Route::get('/siswa/liulus/list', 'showLulus')
+    ->name('siswa.lulus');
   Route::get('/siswa/lomba/list', 'siswaLomba')
     ->name('siswa.lomba');
   Route::get('/siswa/organisasi/list', 'siswaOrganisasi')

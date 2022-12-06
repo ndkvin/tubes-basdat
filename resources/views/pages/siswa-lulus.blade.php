@@ -11,7 +11,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Alamat</th>
-                        <th scope="col">Tanggal Keluar</th>
+                        <th scope="col">Tanggal Lulus</th>
                         <th scope="col">Riwayat Belajar</th>
                     </tr>
                 </thead>
@@ -25,7 +25,7 @@
                             <td>
                                 {{ $siswa->Jalan }}, {{ $siswa->Kelurahan }}, {{ $siswa->Kecamatan }}, {{ $siswa->Kota }}
                             </td>
-                            <td>{{ $siswa->TanggalKeluar }}</td>
+                            <td>{{ $siswa->TanggalLulus }}</td>
                             <td>
                                 <a href="{{ route('siswa.riwayat', $siswa->Nis) }}">
                                     Lihat history
